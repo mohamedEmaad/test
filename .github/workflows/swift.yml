@@ -11,5 +11,3 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: xcodebuild -project 'Test.xcodeproj' -scheme 'Test' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO
-    - name: Run tests
-      run: xcodebuild -project 'Test.xcodeproj' -scheme 'Test' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.2' clean test
